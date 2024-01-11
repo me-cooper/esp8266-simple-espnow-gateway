@@ -78,7 +78,7 @@ void makeAPIcall(String endpoint){
 void loop() {
   
   if (Serial.available()) {
-    String receivedString = Serial.readString();
+    String receivedString = Serial.readStringUntil('\n');
     receivedString.trim();
     
     // Überprüfen, ob der String "action:" enthält
